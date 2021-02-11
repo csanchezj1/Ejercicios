@@ -2,7 +2,7 @@ var app = angular.module("myApp", []);
 
 
 app.controller('myCtrl', function ($scope) {
-    $scope.listaNumeros = [10,20,15,30,80,5];
+    $scope.listaNumeros = [];
     
     
     $scope.agregarNumeros = function () {

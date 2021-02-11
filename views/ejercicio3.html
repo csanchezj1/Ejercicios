@@ -4,10 +4,20 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body ng-app="myApp" ng-cloak>
-    <div ng-controller="myCtrl" class="w3-card-2 w3-margin" style="max-width: 600px;">
+    <div ng-controller="ejercicio3Ctrl" class="w3-card-2 w3-margin" style="max-width: 600px;">
         <header class="w3-container w3-light-grey w3-padding-16">
             <h3>Mi lista de numeros</h3>
         </header>
+        <div class="w3-container w3-light-grey w3-padding-16">
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s10">
+                    <input type="number" placeholder="Agregar aqui" ng-model="agregarNum" class="w3-input w3-border w3-padding">
+                    <button ng-click="agregarNumeros()" class="w3-btn w3-padding w3-green">Agregar</button>
+                </div>
+            </div>
+
+        </div>
+
         <ul class="w3-ul">
             <li ng-repeat="x in listaNumeros" class="w3-padding-16">{{x}}</li>
         </ul>
@@ -15,31 +25,19 @@
             <button ng-click="sumarNumeros()" class="w3-btn w3-padding w3-blue">Sumar</button>
         </div>
         <div class="w3-container w3-light-grey w3-padding-16">
-            <h5>Numero mayor: {{max}} </h5>
-            <h5>Numero menor es: {{min}} </h5>
+            <h5>Numero mayor: <span ng-bind="max"></span></h5>
+            <h5>Numero menor es: <span ng-bind="min"></span></h5>
             <h5>La suma maxima es: <span ng-bind="sumaMax - min"></span> </h5>
-            <h5>La suma minima es: {{sumaMin}} </h5>
+            <h5>La suma minima es: <span ng-bind="sumaMin"></span></h5>
+            
         </div>
-        <!--
-    <div class="w3-container w3-light-grey w3-padding-16">
-            <div class="w3-row w3-margin-top">
-                <div class="w3-col s10">
-                    <input placeholder="Agregar aqui" ng-model="agregarNum" class="w3-input w3-border w3-padding">
-                </div>
-                <div class="w3-col s2">
-                    <button ng-click="agregarNumeros()" class="w3-btn w3-padding w3-green">Agregar</button>
-                </div>
 
-            </div>
-
-        </div>
--->
-
+        
 
 
     </div>
 
-    <script src="ejercicio3.js">
+    <!--<script src="../ejercicio3.js">-->
 
     </script>
 </body>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Suma de arreglos</title>
+</head>
+
+
+
+<body ng-app="myApp">
+
+    <div ng-controller="ejercicio2Ctrl">
+
+        <div class="jumbotron text-center">
+            <h1>Suma de dos Arreglos</h1>
+        </div>
+        <div class="w3-container w3-light-grey w3-padding-16">
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s10">
+                    <input type="number" placeholder="Agregue aqui los numeros del arreglo 1" ng-model="agregarNum" class="w3-input w3-border w3-padding">
+                    <button ng-click="agregarNumeros1()" class="w3-btn w3-padding w3-green">Agregar</button>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="w3-container w3-light-grey w3-padding-16">
+            <div class="w3-row w3-margin-top">
+                <div class="w3-col s10">
+                    <input type="number" placeholder="Agregar aqui los numeros del arreglo 2" ng-model="agregarNum" class="w3-input w3-border w3-padding">
+                    <button ng-click="agregarNumeros2()" class="w3-btn w3-padding w3-green">Agregar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <h2>Arreglo 1: {{arreglo1}}</h2>
+            <h2>Arreglo 2: {{arreglo2}}</h2>
+            <button class="btn btn-primary text-center" ng-click="sumarArreglos()">Sumar Arreglos</button>
+            <div class="container">
+                <h2 class="text-success">La suma de los arreglos es: {{arregloSumado}}</h2>
+            </div>
+        </div>
+
+
+    </div>
+    <!--<script src="ejercicio2.js"></script>-->
+</body>
+
+</html>
