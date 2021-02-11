@@ -54,92 +54,102 @@ app.controller("ejercicio1Ctrl", function ($scope) {
             }
         } else if ($scope.jugador.opcion[0].opNombre == "Papel") {
             if ($scope.jugador.opcion[1].opNombre == "Piedra" || $scope.jugador.opcion[1].opNombre == "Spock") {
-         
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
 
-                
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
+
+
             }
             else {
-               
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
-                
+
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
+
             }
         } else if ($scope.jugador.opcion[0].opNombre == "Tijeras") {
             if ($scope.jugador.opcion[1].opNombre == "Papel" || $scope.jugador.opcion[1].opNombre == "Lagarto") {
-                
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
-                
+
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
+
             }
             else {
-                    $scope.mostrarGanador2 = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
-                
+                $scope.mostrarGanador2 = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
+
             }
         } else if ($scope.jugador.opcion[0].opNombre == "Lagarto") {
             if ($scope.jugador.opcion[1].opNombre == "Papel" || $scope.jugador.opcion[1].opNombre == "Spock") {
-                
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
 
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
             }
             else {
-                
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
 
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
-            }
-        } else if ($scope.jugador.opcion[0].opNombre == "Spock") {
-            if ($scope.jugador.opcion[1].opNombre == "Piedra" || $scope.jugador.opcion[1].opNombre == "Tijera") {
-                
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
-                
-            }
-            else {
-                
-                    $scope.mostrarGanador = !$scope.mostrarGanador;
-                    $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
-                
-            }
-        } else {
-           
                 $scope.mostrarGanador = !$scope.mostrarGanador;
 
                 $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
+            }
+        } else if ($scope.jugador.opcion[0].opNombre == "Spock") {
+            if ($scope.jugador.opcion[1].opNombre == "Piedra" || $scope.jugador.opcion[1].opNombre == "Tijera") {
+
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[0];
+
+            }
+            else {
+
+                $scope.mostrarGanador = !$scope.mostrarGanador;
+                $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
+
+            }
+        } else {
+
+            $scope.mostrarGanador = !$scope.mostrarGanador;
+
+            $scope.mensaje = "Felicidades! Ha ganado " + $scope.jugador.nombre[1];
         }
     }
 });
 app.controller("ejercicio2Ctrl", function ($scope) {
-    $scope.arreglo1 = [],
-        $scope.arreglo2 = [],
-
-        $scope.agregarNumeros1 = function () {
-            if (!$scope.agregarNum) { return; }
-            $scope.arreglo1.push($scope.agregarNum)
-        }
+    $scope.arreglo1 = [];
+    $scope.arreglo2 = [];
+    $scope.arregloSumado = [];
+    $scope.agregarNumeros1 = function () {
+        if (!$scope.agregarNum) { return; }
+        $scope.arreglo1.push($scope.agregarNum)
+    }
 
     $scope.agregarNumeros2 = function () {
         if (!$scope.agregarNum) { return; }
         $scope.arreglo2.push($scope.agregarNum)
     }
 
+    $scope.llenarAleatorio = function () {
+        $scope.arreglo1.push(Math.floor(Math.random() * (1000 - 0)) + 0);
+        $scope.arreglo2.push(Math.floor(Math.random() * (1000 - 0)) + 0);
 
-    $scope.arregloSumado = [],
-        $scope.sumarArreglos = function () {
+    }
 
-            for (let index = 0; index < $scope.arreglo2.length; index++) {
-                $scope.arregloSumado[index] = $scope.arreglo1[index] + $scope.arreglo2[index];
 
-            }
+
+    $scope.sumarArreglos = function () {
+
+        for (let index = 0; index < $scope.arreglo2.length; index++) {
+            $scope.arregloSumado[index] = $scope.arreglo1[index] + $scope.arreglo2[index];
 
         }
+
+    }
 });
 
 app.controller('ejercicio3Ctrl', function ($scope) {
     $scope.listaNumeros = [];
+    $scope.llenarAleatorio = function () {
+        $scope.listaNumeros.push(Math.floor(Math.random() * (1000 - 0)) + 0);
+
+    }
 
 
     $scope.agregarNumeros = function () {
@@ -151,6 +161,7 @@ app.controller('ejercicio3Ctrl', function ($scope) {
         if ($scope.listaNumeros == "") {
             alert("El arreglo esta vacio");
         }
+
 
         $scope.min = $scope.listaNumeros[0];
         $scope.max = $scope.listaNumeros[0];

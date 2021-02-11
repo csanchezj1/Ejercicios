@@ -14,6 +14,11 @@ app.controller('ejercicio3Ctrl', function ($scope) {
             alert("El arreglo esta vacio");
         }
 
+        $scope.llenarAleatorio = function () {
+            $scope.listaNumeros.push(Math.floor(Math.random()* (1000 - 0)) + 0);
+           
+        }
+
         $scope.min = $scope.listaNumeros[0];
         $scope.max = $scope.listaNumeros[0];
 
