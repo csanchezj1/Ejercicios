@@ -1,4 +1,3 @@
-var app = angular.module("myApp", []);
 app.controller("ejercicio1Ctrl", function ($scope) {
     $scope.jugador = [{ nombre: "", opcion: "" }];
     $scope.opciones = [

@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../libs/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Juego</title>
 </head>
-
 
 <body ng-app="myApp">
     <div class="jumbotron text-center">
@@ -39,9 +44,9 @@
             <div ng-show="mostrarGanador">
                 <div class="alert alert-success">
                     <strong>{{mensaje}} </strong>
-                  </div>
+                </div>
             </div>
-         
+
             <div ng-show="inicio">
                 <td>
                     <tr>
@@ -50,11 +55,11 @@
                             <div class="form-group">
                                 <label>Selecciona una opcion:</label>
                                 <select class="form-control" ng-model="jugador.opcion[0]">
-                                    <option ng-repeat="x in opciones" ng-value="{{x}}" >{{x.opNombre}}</option>
+                                    <option ng-repeat="x in opciones" ng-value="{{x}}">{{x.opNombre}}</option>
                                 </select>
                                 <h3>La opcion elegida es: {{jugador.opcion[0].opNombre}}</h3>
                                 <div>
-                                    <img src={{jugador.opcion[0].imagen}} class="img-rounded" >
+                                    <img src={{jugador.opcion[0].imagen}} class="img-rounded">
                                 </div>
                             </div>
                         </div>
@@ -67,27 +72,27 @@
                             <div class="form-group">
                                 <label>Selecciona una opcion:</label>
                                 <select class="form-control" ng-model="jugador.opcion[1]">
-                                    <option ng-repeat="x in opciones" ng-value="{{x}}" >{{x.opNombre}}</option>
+                                    <option ng-repeat="x in opciones" ng-value="{{x}}">{{x.opNombre}}</option>
                                 </select>
                                 <div>
                                     <h3>La opcion elegida es: {{jugador.opcion[1].opNombre}}</h3>
                                     <div>
-                                        <img src={{jugador.opcion[1].imagen}} class="img-rounded" >
+                                        <img src={{jugador.opcion[1].imagen}} class="img-rounded">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </tr>
                 </td>
-                
+
             </div>
-            <div>   
+            <div>
                 <button class="btn btn-success" ng-click="comparar()">Jugar!</button>
             </div>
         </div>
     </div>
+    <script src="../controllers/ejercicio1.js"></script>
     
-
 </body>
 
 </html>

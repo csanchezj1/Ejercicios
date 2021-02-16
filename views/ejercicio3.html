@@ -2,6 +2,7 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Suma Maxima y minima</title>
 
 <body ng-app="myApp" ng-cloak>
     <div ng-controller="ejercicio3Ctrl" class="w3-card-2 w3-margin" style="max-width: 600px;">
@@ -22,10 +23,12 @@
             </div>
 
         </div>
-
-        <ul class="w3-ul">
-            <li ng-repeat="x in listaNumeros" class="w3-padding-16">{{x}}</li>
-        </ul>
+        
+            <ul class="w3-ul">
+                <li ng-repeat="x in listaNumeros" class="w3-padding-16">{{x}}</li>
+            </ul>
+        
+        
         <div class="w3-col s2">
             <button ng-click="sumarNumeros()" class="w3-btn w3-padding w3-blue">Sumar</button>
         </div>
@@ -41,10 +44,7 @@
 
 
     </div>
-
-    <!--<script src="../ejercicio3.js">-->
-
-    </script>
+    <script src="../controllers/ejercicio3.js"></script>
 </body>
 
 </html>

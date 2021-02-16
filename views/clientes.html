@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="../libs/ui-bootstrap-tpls-2.5.0.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Clientes</title>
+</head>
+
+<body ng-app="myApp">
+
+  <div ng-controller="clientesCtrl">
+    <uib-accordion>
+      <div uib-accordion-group class="panel-default" heading="Clientes">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID Cliente</th>
+              <th>Nombre de la Empresa</th>
+              <th>Nombre de contacto</th>
+              <th>Detalle</th>
+            </tr>
+          </thead>
+          <tbody ng-repeat="x in myData">
+            <tr>
+              <td> {{x.CustomerID}}</td>
+              <td>{{x.CompanyName}}</td>
+              <td>{{x.ContactName}}</td>
+              <td>
+                <button class="btn btn-primary">Detalle</button>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+
+      </div>
+
+ <script src="../controllers/clientes.js"></script>
+  </div>
+
+  </uib-accordion>
+
+ 
+
+  </script>
+
+</body>
+
+</html>

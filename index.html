@@ -2,17 +2,18 @@
 <html>
 
 <head>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 
 
 <body ng-app="myApp">
-
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -25,27 +26,37 @@
             </div>
             <div class="nav navbar-nav">
                 <ul class="nav navbar-nav">
-                    <li><a href="#!juego">Jugar Piedra, papel o Tijera extendido</a></li>
+                    <li><a href="#!juego">Piedra, papel o Tijera extendido</a></li>
                     <li><a href="#!sumaArreglos">Sumar dos arreglos</a></li>
-                    <li><a href="#!sumaMaxMin">Suma maxima y minima de una arreglo</a></li>
+                    <li><a href="#!sumaMaxMin">Suma max y min de un arreglo</a></li>
+                    <li><a href="#!clientes">Clientes</a></li>
+                    <li><a href="#!productos">Productos</a></li>
                     
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container">
-        <div class="ng-view"></div>
+        <div class="ng-view">                   
+        </div>
     </div>
     <div class="container">
         <p>Click en el ejercicio que desea ver.</p>
-        
+
     </div>
 
     <script src="app.js"></script>
-    
+
+ 
+    <script src="controllers/ejercicio1.js"></script>
+    <script src="controllers/ejercicio2.js"></script>
+    <script src="controllers/ejercicio3.js"></script>
+    <script src="controllers/clientes.js"></script>
+    <script src="controllers/productos.js"></script>
 
 
 
 </body>
+
 
 </html>

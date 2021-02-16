@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="../libs/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Productos</title>
+</head>
+
+<body ng-app="myApp" ng-controller="productosCtrl">
+    <div>
+        <uib-accordion>
+            <div uib-accordion-group class="panel-default" heading="Productos">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>ID Producto</th>
+                            <th>Nombre del Producto</th>
+                            <th>ID Categoria</th>
+                            <th>Precio Und.</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody ng-repeat="x in myData">
+                        <tr>
+                            <td>{{x.ProductID}}</td>
+                            <td>{{x.ProductName}}</td>
+                            <td>{{x.CategoryID}}</td>
+                            <td>{{x.UnitPrice}}</td>
+                            <td >
+                                <button type="button" class="btn btn-success" ng-click="$ctrl.open()">Detalle!</button>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    </uib-accordion>
+    <script src="../controllers/productos.js"></script>
+    <script src="../controllers/modalProductos.js"></script>
+</body>
+
+</html>
