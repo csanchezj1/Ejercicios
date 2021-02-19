@@ -20,7 +20,7 @@
     <div>
         <uib-accordion>
             <div uib-accordion-group class="panel-default" heading="Productos">
-                <table class="table table-responsive">
+                <table class="table table-mat">
                     <thead>
                         <tr>
                             <th>ID Producto</th>
@@ -36,18 +36,22 @@
                             <td>{{x.ProductName}}</td>
                             <td>{{x.CategoryID}}</td>
                             <td>{{x.UnitPrice}}</td>
-                            <td >
-                                <button type="button" class="btn btn-success" ng-click="$ctrl.open()">Detalle!</button>
+                            <td>
+                                <button type="button" class="btn btn-info" ng-click="abrirModalProducto(x.ProductID)">
+                                        Detalle
+                                    </button>
                                 
+
+
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
     </div>
-    </uib-accordion>
-    <script src="../controllers/productos.js"></script>
-    <script src="../controllers/modalProductos.js"></script>
+    </uib-accordion> 
 </body>
 
+<script src="../controllers/productos.js"></script>
+   
 </html>

@@ -22,7 +22,7 @@
   <div ng-controller="clientesCtrl">
     <uib-accordion>
       <div uib-accordion-group class="panel-default" heading="Clientes">
-        <table class="table table-hover">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>ID Cliente</th>
@@ -33,11 +33,11 @@
           </thead>
           <tbody ng-repeat="x in myData">
             <tr>
-              <td> {{x.CustomerID}}</td>
+              <td>{{x.CustomerID}}</td>
               <td>{{x.CompanyName}}</td>
               <td>{{x.ContactName}}</td>
               <td>
-                <button class="btn btn-primary">Detalle</button>
+                <button type="button" class="btn btn-info" ng-click="abrirModalCliente(x.CustomerID)">Detalle</button>
               </td>
             </tr>
 
@@ -47,15 +47,12 @@
 
       </div>
 
- <script src="../controllers/clientes.js"></script>
   </div>
 
   </uib-accordion>
 
  
 
-  </script>
-
 </body>
-
+<script src="../controllers/clientes.js"></script>
 </html>

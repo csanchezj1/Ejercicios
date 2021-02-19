@@ -1,0 +1,28 @@
+<div class="modal-header">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Detalle del Cliente</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <form ng-repeat="x in detalleCliente">
+            
+            <h6>Cliente ID: {{x.CustomerID}}</h6>
+            <h6>Nombre de la Empresa Cliente: {{x.CompanyName}}</h6>
+            <h6>Nombre de contacto: {{x.ContactName}}</h6>
+            <h6>Cargo del contacto: {{x.ContactTitle}}</h6>
+            <h6>Direccion: {{x.Address}}</h6>
+            <h6>Ciudad: {{x.City}}</h6>
+            <h6>Region: {{x.Region}}</h6>
+            <h6>Codigo Postal: {{x.PostalCode}}</h6>
+            <h6>Pais: {{x.Country}}</h6>
+            <h6>Telefono: {{x.Phone}}</h6>
+            <h6>Fax: {{x.Fax}}</h6>
+        </form>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        
+    </div>
+</div>

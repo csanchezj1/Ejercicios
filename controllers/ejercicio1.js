@@ -7,6 +7,7 @@ app.controller("ejercicio1Ctrl", function ($scope) {
         { opNombre: "Lagarto", imagen: "images/Lagarto.jpg" },
         { opNombre: "Spock", imagen: "images/Spock.jpg" }
     ];
+    
     $scope.inicio = false;
 
     $scope.iniciarJuego = function () {

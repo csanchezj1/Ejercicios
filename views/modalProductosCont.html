@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Detalle del Producto</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        <form ng-repeat="x in detalleProducto">
+            
+            <h6>ID de Producto: <span>{{x.ProductID}}</span></h6>
+            <h6>Nombre del producto: {{x.ProductName}}</h6>
+            <h6>Proveedor: {{x.SupplierID}}</h6>
+            <h6>Categoria: {{x.CategoryID}}</h6>
+            <h6>Cantidad por Unidad: {{x.QuantityPerUnit}}</h6>
+            <h6>Precio unitario: {{x.UnitPrice}}</h6>
+            <h6>Stock: {{x.UnitsInStock}}</h6>
+            <h6>Unidades separadas: {{x.UnitsOnOrder}}</h6>
+            <h6>Nivel de orden: {{x.ReorderLevel}}</h6>
+            <h6>Descontinuado: {{x.Discontinued}}</h6>
+        </form>
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+        
+    </div>
+</div>

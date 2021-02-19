@@ -1,15 +1,16 @@
 app.controller("ejercicio2Ctrl", function ($scope) {
     $scope.arreglo1 = [];
     $scope.arreglo2 = [];
-
+    
     $scope.agregarNumeros1 = function () {
         if (!$scope.agregarNum) { return; }
         $scope.arreglo1.push($scope.agregarNum)
+        
     }
 
     $scope.agregarNumeros2 = function () {
-        if (!$scope.agregarNum) { return; }
-        $scope.arreglo2.push($scope.agregarNum)
+        if (!$scope.agregarNum1) { return; }
+        $scope.arreglo2.push($scope.agregarNum1)
     }
 
     $scope.llenarAleatorio = function () {
